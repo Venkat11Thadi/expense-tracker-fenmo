@@ -5,7 +5,7 @@ A full-stack, production-ready minimalist expense tracker built to handle real-w
 ## Live Links
 * **Live Application:** [Insert Vercel Link Here]
 * **Backend API:** [Insert Render/Hosting Link Here]
-* **GitHub Repository:** [Insert Repo Link Here]
+* **GitHub Repository:** [https://github.com/Venkat11Thadi/expense-tracker-fenmo]
 
 ## Tech Stack
 * **Backend:** Python, FastAPI, SQLModel, SQLite
