@@ -70,3 +70,35 @@ def get_expenses(
         
     results = session.exec(query).all()
     return results
+
+@app.put("/expenses/{expense_id}", response_model=ExpenseRead)
+def update_expense(
+    expense_id: int, 
+    expense_update: ExpenseCreate, 
+    session: Session = Depends(get_session)
+):
+    """Updates an existing expense."""
+    db_expense = session.get(Expense, expense_id)
+    if not db_expense:
+        raise HTTPException(status_code=404, detail="Expense not found")
+        
+    # Update the fields
+    expense_data = expense_update.model_dump(exclude_unset=True)
+    for key, value in expense_data.items():
+        setattr(db_expense, key, value)
+        
+    session.add(db_expense)
+    session.commit()
+    session.refresh(db_expense)
+    return db_expense
+
+@app.delete("/expenses/{expense_id}")
+def delete_expense(expense_id: int, session: Session = Depends(get_session)):
+    """Deletes an expense."""
+    db_expense = session.get(Expense, expense_id)
+    if not db_expense:
+        raise HTTPException(status_code=404, detail="Expense not found")
+        
+    session.delete(db_expense)
+    session.commit()
+    return {"message": "Expense deleted successfully"}
