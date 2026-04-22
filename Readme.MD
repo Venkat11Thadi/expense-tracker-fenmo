@@ -39,7 +39,7 @@ To handle unreliable networks (e.g., users mashing the "Submit" button, or brows
 * The backend verifies this key before insertion. If a network retry occurs with an existing key, the API safely catches the `IntegrityError` and returns a `200 OK` with the existing record, avoiding duplicate records or `500 Server Errors`.
 
 ### 3. Accessible, "Notion-Style" UX
-The UI was built with a strict minimalist aesthetic, utilizing a custom "Nordic Sage" color palette to reduce optical glare. Data is organized into clean, structured card layouts. Crucially, primary actions (Edit/Delete) are permanently visible rather than hidden behind hover states, ensuring the application remains fully accessible and usable on touchscreens.
+The UI was built with a strict minimalist aesthetic, utilizing a custom "Nordic Sage" color palette to reduce optical glare. Data is organized into clean, structured card layouts. 
 
 ---
 
