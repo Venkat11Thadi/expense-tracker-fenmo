@@ -3,9 +3,9 @@
 A full-stack, production-ready minimalist expense tracker built to handle real-world network conditions, focusing on data integrity, idempotency, and a resilient user experience.
 
 ## Live Links
-* **Live Application:** [Insert Vercel Link Here]
+* **Live Application:** [[Vercel link](https://expense-tracker-fenmo-jet.vercel.app)]
 * **Backend API:** [[Render link](https://expense-tracker-fenmo.onrender.com/)]
-* **GitHub Repository:** [https://github.com/Venkat11Thadi/expense-tracker-fenmo]
+* **GitHub Repository:** [[Github link](https://github.com/Venkat11Thadi/expense-tracker-fenmo)]
 
 ## Tech Stack
 * **Backend:** Python, FastAPI, SQLModel, SQLite
